@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Productos</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <h1>{{msg}}</h1>
+        <button type="button" class="btn btn-outline-success"><a href="https://localhost:44349/Paginas/ProductoCreate.html">Nuevo</a></button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Acciones</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="producto in productList">
+                    <td>
+                        <button type="button" class="btn btn-warning" @click="updateProduct(producto.IdProducto)">editar</button>
+                        <button type="button" class="btn btn-danger" @click="deleteProdutc(producto.IdProducto)">eliminar</button>
+                    </td>
+                    <td>{{producto.IdProducto}}</td>
+                    <td>{{producto.Nombre}}</td>
+                    <td>{{producto.Descripcion}}</td>
+                    <td>{{producto.Precio}}</td>
+                    <td>{{producto.Stock}}</td>
+                </tr>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="Scripts/productos.js"></script>
+</body>
+
+</html>
