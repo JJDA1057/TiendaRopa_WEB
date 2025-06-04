@@ -2,7 +2,7 @@
     name:"productos",
     data() {
         return {
-            msg: 'Hello world with vue js!',
+            msg: 'Productos',
             productList:[]
         }
     },
@@ -11,7 +11,7 @@
     },
     methods:{
         deleteProdutc(id){
-            let response = axios.get('https://localhost:44359/api/productos/eliminar?id='+id);
+            let response = axios.delete('https://localhost:44359/api/productos/eliminar?id='+id);
             response.then(response=>{
                 alert('El producto con id: '+id+'se elimino correctamente!');
                 this.loadProducts();

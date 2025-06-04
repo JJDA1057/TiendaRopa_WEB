@@ -29,7 +29,7 @@
 
             $("#dvMensaje").removeClass("alert alert-danger").addClass("alert alert-success").html(Respuesta.Mensaje);
 
-            window.location.href = "Pagina1.html";
+            window.location.href = "productos.html";
         }
     }
 }
