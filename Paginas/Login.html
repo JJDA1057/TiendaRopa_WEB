@@ -1,57 +1,50 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inicio App dllo WEB</title>
-
-    <!-- Google Font: Source Sans Pro -->
-    <!-- Font Awesome -->
+    <title>Login de Usuario</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link href="Estilos/css/all.min.css" rel="stylesheet" />
-    <!-- Theme style -->
     <link href="Estilos/adminlte.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition login-page">
-    <div class="login-box">
-        <div class="login-logo">
-            <h1>APLICACIÓN</h1>
-        </div>
-        <!-- /.login-logo -->
-        <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Ingresa usuario clave para iniciar</p>
-
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" id="txtUsuario" class="form-control" placeholder="Usuario">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
+    <div class="login-box" style="width: 480px;">
+        <div class="card card-primary">
+            <div class="card-header text-center">
+                <h3 class="card-title">Ingreso de Usuario</h3>
+            </div>
+            <div class="card-body">
+                <form id="frmLogin">
+                    <div class="form-group">
+                        <label for="txtUsuario">Nombre de Usuario</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
+                            <input type="text" id="txtUsuario" class="form-control" placeholder="Ingrese el usuario" />
                         </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="password" id="txtClave" class="form-control" placeholder="Clave">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                    <div class="form-group">
+                        <label for="txtClave">Clave</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
+                            <input type="password" id="txtClave" class="form-control" placeholder="Ingrese la clave" />
                         </div>
                     </div>
+                    <div id="dvMensaje" style="margin-top: 15px; font-weight: bold; color: red;"></div>
                     <div class="row">
                         <div class="col-12">
-                            <button type="button" class="btn btn-primary btn-block" onclick="Ingresar()">INGRESAR</button>
+                            <button type="button" id="btnIngresar" class="btn btn-primary btn-block" onclick="Ingresar()">Ingresar</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="card-footer">
-                <div id="dvMensaje" class=""></div>
-            </div>
-            <!-- /.login-card-body -->
         </div>
     </div>
-    <!-- /.login-box -->
+
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/Comunes/CRUD.js"></script>
