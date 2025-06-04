@@ -7,7 +7,7 @@
         Clave: $("#txtClave").val()
     };
 
-    // Llamas al servicio con POST, envías el objeto login y esperas la respuesta
+   
     const Respuesta = await EjecutarComandoServicioRpta("POST", URL, login);
     console.log("Respuesta recibida:", Respuesta);
     if (Respuesta === undefined) {

@@ -9,8 +9,10 @@
                 body: JSON.stringify(Objeto)
             });
         //Leer la respuesta
-        const Resultado = await Respuesta.json();
-        $("#dvMensaje").html(`<div style="color: green;">✔ ${Resultado.mensaje}</div>`);
+        const textoRespuesta = await Respuesta.text();
+        console.log("Respuesta del servidor:", textoRespuesta);
+        $("#dvMensaje").html(`<div style="color: green;">✔ ${textoRespuesta}</div>`);
+
     }
     catch (error) {
         //Se presenta el error en un div de Mensaje

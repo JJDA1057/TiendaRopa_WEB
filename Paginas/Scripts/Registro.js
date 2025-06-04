@@ -6,6 +6,11 @@
             IdEmpleado: parseInt($("#txtIdEmpleado").val())
         };
 
-        await EjecutarComandoServicio("POST", "https://localhost:44359/api/Usuarios/CrearUsuario", datos);
+        try {
+            await EjecutarComandoServicio("POST", "https://localhost:44359/api/Usuarios/CrearUsuario", datos);
+            window.location.href = "Login1.html"; 
+        } catch (error) {
+            $("#dvMensaje").text("Error al registrar el usuario");
+        }
     });
 });
